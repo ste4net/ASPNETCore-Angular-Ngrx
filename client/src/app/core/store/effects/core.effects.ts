@@ -55,7 +55,7 @@ export class CoreEffects {
   @Effect({ dispatch: false })
   loginSuccess$ = this.actions$.pipe(
     ofType(CoreActions.LOGIN_SUCCESS),
-    tap((action: CoreActions.LogoutAction) => {
+    tap((action: CoreActions.LoginSuccessAction) => {
       this.router.navigate(['/home']);
     })
   );
